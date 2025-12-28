@@ -1,0 +1,168 @@
+/* =========================
+   PAGE CENTERING
+========================= */
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background: #0a0f1c;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.home-container {
+  width: 80%;
+  max-width: 1000px;
+  height: 380px;
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.9);
+
+  transform-style: preserve-3d;
+}
+
+/* =========================
+   ANIMATED BORDER
+========================= */
+.home-container::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 32px;
+  z-index: 0;
+
+  background: linear-gradient(
+    120deg,
+    #00eaff,
+    #0047ff,
+    #00ffc8,
+    #0047ff,
+    #00eaff
+  );
+
+  background-size: 300% 300%;
+  animation: borderFlow 8s linear infinite;
+
+  filter: blur(10px);
+  opacity: 0.9;
+}
+
+/* Inner mask to keep border only */
+.home-container::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 25px;
+  background: inherit;
+  z-index: 1;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10, 20, 40, 0.45),
+    rgba(0, 0, 0, 0.85)
+  );
+  z-index: 2;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.home-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  transform-style: preserve-3d;
+}
+
+.home-content h1 {
+  font-size: 48px;
+  letter-spacing: 4px;
+  margin-bottom: 14px;
+  text-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+}
+
+.home-content p {
+  max-width: 520px;
+  font-size: 16px;
+  color: #d6d6d6;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   3D BUTTON
+========================= */
+.get-started-btn {
+  padding: 12px 32px;
+  font-size: 15px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(145deg, #0d6efd, #003cff);
+  color: white;
+
+  transform: translateZ(20px);
+  box-shadow:
+    0 8px 0 #0025a8,
+    0 20px 35px rgba(0, 0, 0, 0.8);
+
+  transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+  transform: translateZ(32px);
+}
+
+.get-started-btn:active {
+  transform: translateZ(10px);
+  box-shadow: 0 4px 0 #0025a8;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .home-container {
+    width: 92%;
+    height: 320px;
+  }
+
+  .home-content h1 {
+    font-size: 36px;
+  }
+}

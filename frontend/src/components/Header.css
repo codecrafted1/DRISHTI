@@ -1,0 +1,151 @@
+/* ===== GLOBAL 3D SETUP ===== */
+body {
+  background: radial-gradient(circle at top, #0f2027, #000);
+  perspective: 1200px;
+}
+
+/* ===== HEADER CARD ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  margin: 20px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transform-style: preserve-3d;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.7),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+
+  transition: transform 0.5s ease;
+}
+
+.header:hover {
+  transform: translateZ(20px);
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateZ(30px);
+}
+
+.logo img {
+  width: 42px;
+  filter: drop-shadow(0 0 12px #00f2ff);
+  cursor: pointer;
+}
+
+.logo span {
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px #00f2ff;
+}
+
+/* ===== NAV ===== */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transform-style: preserve-3d;
+}
+
+/* ===== 3D BUTTONS ===== */
+.nav-btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #0d6efd, #003cff);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  transform-style: preserve-3d;
+  transform: translateZ(15px);
+
+  box-shadow:
+    0 8px 0 #0025a8,
+    0 15px 25px rgba(0, 0, 0, 0.6);
+
+  transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+  transform: translateZ(30px) rotateX(8deg);
+  box-shadow:
+    0 4px 0 #0025a8,
+    0 25px 40px rgba(0, 0, 0, 0.8);
+}
+
+.nav-btn:active {
+  transform: translateZ(8px);
+  box-shadow:
+    0 2px 0 #0025a8;
+}
+
+/* ===== ACCOUNT ===== */
+.account {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 160px;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  overflow: hidden;
+
+  transform-origin: top;
+  transform: rotateX(-20deg) translateZ(20px);
+  animation: dropdown3d 0.4s ease forwards;
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.9),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+@keyframes dropdown3d {
+  from {
+    opacity: 0;
+    transform: rotateX(-40deg) translateZ(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg) translateZ(20px);
+  }
+}
+
+/* ===== DROPDOWN BUTTONS ===== */
+.dropdown-btn {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  background: linear-gradient(90deg, #0d6efd, #00f2ff);
+  transform: translateZ(10px);
+}
+

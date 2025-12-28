@@ -1,0 +1,96 @@
+/* PAGE WRAPPER */
+.contact-wrapper{
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: white;
+}
+
+/* 3D CARD */
+.contact-card{
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(145deg,#0d6efd,#002c8f);
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow:
+    0 12px 0 #001c5a,
+    0 30px 55px rgba(0,0,0,.85);
+  transform: perspective(1000px) rotateX(6deg);
+  transition: .35s ease;
+}
+
+.contact-card:hover{
+  transform: perspective(1000px) rotateX(0deg) translateY(-6px);
+}
+
+/* TITLE */
+.contact-card h2{
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00eaff;
+  text-shadow: 0 0 16px rgba(0,234,255,.8);
+}
+
+/* INPUTS */
+.contact-card input{
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255,255,255,.1);
+  color: white;
+}
+
+.contact-card input::placeholder{
+  color: #cfdfff;
+}
+
+/* BUTTON */
+.contact-card button{
+  width: 100%;
+  padding: 12px;
+  border-radius: 16px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(145deg,#00eaff,#00a9c7);
+  color: #002c8f;
+  transition: .3s ease;
+}
+
+.contact-card button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,234,255,.6);
+}
+
+/* RESPONSIVE */
+@media(max-width:480px){
+  .contact-card{
+    padding: 28px 22px;
+  }
+}
+/* SELECT DROPDOWNS */
+.contact-card select{
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255,255,255,.1);
+  color: white;
+  cursor: pointer;
+}
+
+.contact-card select option{
+  background: #0d1b3f;
+  color: white;
+}
+ 

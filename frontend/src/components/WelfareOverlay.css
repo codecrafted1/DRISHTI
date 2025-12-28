@@ -1,0 +1,121 @@
+/* ===== FULL SCREEN OVERLAY ===== */
+.welfare-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 10, 25, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30%;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.welfare-container {
+  width: 85%;
+  max-width: 1100px;
+  height: 80vh;
+  background: linear-gradient(180deg, #0b1530, #020617);
+  border-radius: 22px;
+  padding: 30px 26px;
+  position: relative;
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+/* ===== TITLE ===== */
+.welfare-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #00eaff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(0, 234, 255, 0.6);
+}
+
+/* ===== CLOSE BUTTON ===== */
+.overlay-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.overlay-close-btn:hover {
+  color: #00eaff;
+  transform: rotate(90deg);
+}
+
+/* ===== SCROLLABLE GRID ===== */
+.welfare-grid {
+  margin-top: 10px;
+  height: calc(100% - 70px);
+  overflow-y: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding-right: 8px;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+.welfare-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.welfare-grid::-webkit-scrollbar-thumb {
+  background: #00eaff;
+  border-radius: 10px;
+}
+
+/* ===== SCHEME CARD ===== */
+.welfare-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  backdrop-filter: blur(10px);
+
+  transition: 0.35s ease;
+}
+
+.welfare-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 234, 255, 0.3);
+}
+
+/* ===== ICON ===== */
+.welfare-icon {
+  font-size: 32px;
+  color: #00eaff;
+  margin-bottom: 12px;
+}
+
+/* ===== TEXT ===== */
+.welfare-card h4 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.welfare-card p {
+  font-size: 13px;
+  color: #cfcfcf;
+  line-height: 1.4;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .welfare-container {
+    width: 94%;
+    height: 85vh;
+  }
+}

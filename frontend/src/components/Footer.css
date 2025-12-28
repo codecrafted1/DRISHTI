@@ -1,0 +1,124 @@
+.footer {
+  margin: 40px 20px 20px;
+  padding: 30px 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  transform-style: preserve-3d;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(255, 255, 255, 0.04);
+}
+
+/* ===== CONTENT GRID ===== */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  transform: translateZ(20px);
+}
+
+/* ===== SECTIONS ===== */
+.footer-section h3 {
+  color: #00f2ff;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.footer-section p,
+.footer-section li {
+  color: #ddd;
+  font-size: 14px;
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-section li:hover {
+  color: #00f2ff;
+  transform: translateX(6px);
+  transition: 0.3s ease;
+}
+
+/* ===== SUBSCRIBE ===== */
+.subscribe-box {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.subscribe-box button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(145deg, #0d6efd, #003cff);
+  color: white;
+
+  transform: translateZ(10px);
+  box-shadow:
+    0 6px 0 #0025a8,
+    0 15px 25px rgba(0, 0, 0, 0.6);
+
+  transition: 0.3s ease;
+}
+
+.subscribe-box button:hover {
+  transform: translateZ(20px);
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(145deg, #111, #000);
+  color: #00f2ff;
+  cursor: pointer;
+
+  transform: translateZ(12px);
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.8);
+
+  transition: 0.3s ease;
+}
+
+.social-icons span:hover {
+  background: #0d6efd;
+  color: white;
+  transform: translateZ(25px);
+}
+
+/* ===== BOTTOM BAR ===== */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #bbb;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}

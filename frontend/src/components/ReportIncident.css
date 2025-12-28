@@ -1,0 +1,80 @@
+.incident-form {
+  max-width: 480px;
+  margin: auto;
+  background: #0d1b3f;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* INPUTS + TEXTAREA */
+.incident-form input,
+.incident-form textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #07132e;
+  color: white;
+  font-size: 14px;
+}
+
+/* TEXTAREA SPECIFIC */
+.incident-form textarea {
+  resize: none;
+  min-height: 90px;
+}
+
+/* FOCUS EFFECT */
+.incident-form input:focus,
+.incident-form textarea:focus {
+  box-shadow: 0 0 0 2px rgba(0, 234, 255, 0.4);
+}
+
+/* FILE INPUT BUTTON */
+.incident-form input::file-selector-button {
+  background: #00eaff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(145deg, #ff4d4f, #ff1a1c);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* CANCEL BUTTON */
+.cancel-btn {
+  position: absolute;
+  top: 90px; /* adjust if header height differs */
+  right: 40px;
+  background: none;
+  border: none;
+  font-size: 34px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.cancel-btn:hover {
+  color: #ff4d4f;
+  transform: scale(1.2);
+}
