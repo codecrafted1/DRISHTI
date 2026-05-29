@@ -12,7 +12,7 @@ import Register from "./components/Register"; // Added Register
 import LiveDashboardOverlay from "./components/LiveDashboardOverlay";
 import Contact from "./components/Contact"; 
 import SahiyogOverlay from "./components/SahiyogOverlay";
-import WelfareOverlay from "./components/WelfareOverlay";
+
 
 function App() {
   const [showLiveDashboard, setShowLiveDashboard] = useState(false);
